@@ -1,0 +1,16 @@
+<h1>all flats</h1>
+
+<div class="container">
+  <% @flats.each do |flat| %>
+    <div class="card">
+
+      <%= link_to flat_path(flat["id"].to_i) do  %>
+        <img src="<%= flat['imageUrl'] %>" alt="">
+        <%= link_to flat['name'], flat_path(flat["id"].to_i)  %>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>
+
+<!-- CRUD - CREATE READ UPDATE DELETE -->
